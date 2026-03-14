@@ -40,7 +40,7 @@ export default function Navbar() {
           className="text-lg font-semibold tracking-tight"
           style={{ color: "var(--accent)" }}
         >
-          basta.dev
+          bastaxdev
         </a>
 
         <ul className="flex items-center gap-6">
