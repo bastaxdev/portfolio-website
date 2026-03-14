@@ -34,7 +34,10 @@ export default function Skills() {
         >
           Stack
         </p>
-        <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+        <h2
+          className="text-4xl font-bold tracking-tight sm:text-5xl"
+          style={{ color: "var(--text-primary)" }}
+        >
           Skills
         </h2>
       </motion.div>
@@ -50,7 +53,11 @@ export default function Skills() {
           <motion.div
             key={skill.category}
             variants={fadeUp}
-            className="rounded-2xl border border-white/10 bg-white/5 p-6"
+            className="rounded-2xl p-6"
+            style={{
+              background: "var(--card-bg)",
+              border: "1px solid var(--card-border)",
+            }}
           >
             <h3
               className="mb-4 text-xs font-semibold tracking-widest uppercase"
@@ -60,7 +67,11 @@ export default function Skills() {
             </h3>
             <ul className="flex flex-col gap-2">
               {skill.items.map((item) => (
-                <li key={item} className="text-sm text-white/60">
+                <li
+                  key={item}
+                  className="text-sm"
+                  style={{ color: "var(--text-muted)" }}
+                >
                   {item}
                 </li>
               ))}

@@ -4,9 +4,13 @@ import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:#", label: "Email" },
+  { icon: Github, href: "https://github.com/bastaxdev", label: "GitHub" },
+  {
+    icon: Linkedin,
+    href: "https://linkedin.com/in/bastaxdev",
+    label: "LinkedIn",
+  },
+  { icon: Mail, href: "mailto:bastaxdev@gmail.com", label: "Email" },
 ];
 
 const fadeUp = {
@@ -24,7 +28,6 @@ export default function Hero() {
       id="hero"
       className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center"
     >
-      {/* background glow */}
       <div
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
@@ -50,6 +53,7 @@ export default function Hero() {
         animate="visible"
         variants={fadeUp}
         className="mb-6 text-5xl font-bold leading-tight tracking-tight sm:text-7xl"
+        style={{ color: "var(--text-primary)" }}
       >
         Hi, I'm <span style={{ color: "var(--accent)" }}>Bartek</span>
       </motion.h1>
@@ -59,13 +63,14 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
         variants={fadeUp}
-        className="mb-10 max-w-xl text-lg leading-relaxed text-white/60"
+        className="mb-10 max-w-xl text-lg leading-relaxed"
+        style={{ color: "var(--text-muted)" }}
       >
         I build modern web applications with{" "}
-        <span className="text-white/90">Next.js</span>,{" "}
-        <span className="text-white/90">TypeScript</span> and{" "}
-        <span className="text-white/90">Supabase</span>. Based in Kraków — open
-        to remote & Norwegian-facing roles.
+        <span style={{ color: "var(--text-primary)" }}>Next.js</span>,{" "}
+        <span style={{ color: "var(--text-primary)" }}>TypeScript</span> and{" "}
+        <span style={{ color: "var(--text-primary)" }}>Supabase</span>. Based in
+        Kraków — open to remote & Norwegian-facing roles.
       </motion.p>
 
       <motion.div
@@ -84,7 +89,11 @@ export default function Hero() {
         </a>
         <a
           href="#contact"
-          className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white/80 transition-colors hover:border-white/40 hover:text-white"
+          className="rounded-full px-6 py-3 text-sm font-semibold transition-colors"
+          style={{
+            border: "1px solid var(--card-border)",
+            color: "var(--text-muted)",
+          }}
         >
           Contact Me
         </a>
@@ -102,7 +111,11 @@ export default function Hero() {
             key={label}
             href={href}
             aria-label={label}
-            className="rounded-full border border-white/10 p-3 text-white/50 transition-all hover:border-white/30 hover:text-white"
+            className="rounded-full p-3 transition-all"
+            style={{
+              border: "1px solid var(--card-border)",
+              color: "var(--text-muted)",
+            }}
           >
             <Icon size={18} />
           </a>
@@ -116,7 +129,11 @@ export default function Hero() {
         variants={fadeUp}
         className="absolute bottom-10 left-1/2 -translate-x-1/2"
       >
-        <ArrowDown size={20} className="animate-bounce text-white/30" />
+        <ArrowDown
+          size={20}
+          className="animate-bounce"
+          style={{ color: "var(--text-faint)" }}
+        />
       </motion.div>
     </section>
   );

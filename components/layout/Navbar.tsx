@@ -24,12 +24,15 @@ export default function Navbar() {
     <motion.header
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: "easeOut" as const }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "border-b border-white/10 bg-[#0a0a0f]/80 backdrop-blur-md"
-          : "bg-transparent"
+        scrolled ? "border-b backdrop-blur-md" : "bg-transparent"
       }`}
+      style={
+        scrolled
+          ? { background: "var(--nav-bg)", borderColor: "var(--card-border)" }
+          : {}
+      }
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
@@ -45,7 +48,8 @@ export default function Navbar() {
             <li key={link.href} className="hidden sm:block">
               <a
                 href={link.href}
-                className="text-sm text-white/60 transition-colors hover:text-white"
+                className="text-sm transition-colors hover:opacity-100"
+                style={{ color: "var(--text-muted)" }}
               >
                 {link.label}
               </a>

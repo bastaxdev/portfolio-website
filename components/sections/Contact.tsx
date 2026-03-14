@@ -55,10 +55,13 @@ export default function Contact() {
         >
           Get in touch
         </p>
-        <h2 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
+        <h2
+          className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl"
+          style={{ color: "var(--text-primary)" }}
+        >
           Contact
         </h2>
-        <p className="mx-auto max-w-md text-white/50">
+        <p className="mx-auto max-w-md" style={{ color: "var(--text-muted)" }}>
           Open to junior developer roles, freelance projects and
           Norwegian-facing opportunities.
         </p>
@@ -76,7 +79,11 @@ export default function Contact() {
             key={label}
             href={href}
             variants={fadeUp}
-            className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-6 py-4 transition-colors hover:border-white/20 hover:bg-white/[0.07]"
+            className="flex items-center gap-4 rounded-2xl px-6 py-4 transition-colors"
+            style={{
+              background: "var(--card-bg)",
+              border: "1px solid var(--card-border)",
+            }}
           >
             <span
               className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full"
@@ -85,8 +92,15 @@ export default function Contact() {
               <Icon size={18} style={{ color: "var(--accent)" }} />
             </span>
             <div>
-              <p className="text-xs text-white/40">{label}</p>
-              <p className="text-sm font-medium">{value}</p>
+              <p className="text-xs" style={{ color: "var(--text-faint)" }}>
+                {label}
+              </p>
+              <p
+                className="text-sm font-medium"
+                style={{ color: "var(--text-primary)" }}
+              >
+                {value}
+              </p>
             </div>
           </motion.a>
         ))}

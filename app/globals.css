@@ -3,6 +3,23 @@
 :root {
   --accent: #8b7cf6;
   --accent-hover: #7c6de0;
+  --text-primary: #ededed;
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --text-faint: rgba(255, 255, 255, 0.3);
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-border-hover: rgba(255, 255, 255, 0.2);
+  --nav-bg: rgba(10, 10, 15, 0.8);
+}
+
+html.light {
+  --text-primary: #080808;
+  --text-muted: rgba(0, 0, 0, 0.75);
+  --text-faint: rgba(0, 0, 0, 0.55);
+  --card-bg: rgba(0, 0, 0, 0.03);
+  --card-border: rgba(0, 0, 0, 0.15);
+  --card-border-hover: rgba(0, 0, 0, 0.3);
+  --nav-bg: rgba(248, 248, 252, 0.8);
 }
 
 html {
@@ -12,12 +29,11 @@ html {
 body {
   font-family: var(--font-geist-sans), Arial, sans-serif;
   background: #0a0a0f;
-  color: #ededed;
+  color: var(--text-primary);
 }
 
 html.light body {
   background: #f8f8fc;
-  color: #111111;
 }
 
 ::selection {
