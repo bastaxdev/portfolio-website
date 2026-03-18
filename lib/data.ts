@@ -1,6 +1,15 @@
 import type { Project, Skill } from '@/types'
 
-export const projects: Project[] = []
+export const projects: Project[] = [
+  {
+    id: 'invo',
+    title: 'Invo',
+    description:
+      'Invoicing app for Polish freelancers working with Norwegian clients. Generates bilingual PL/NO PDFs with the correct VAT reverse charge notice.',
+    tech: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS', 'shadcn/ui'],
+    liveUrl: 'https://bastaxdev-invo.vercel.app/',
+  },
+]
 
 export const skills: Skill[] = [
   {

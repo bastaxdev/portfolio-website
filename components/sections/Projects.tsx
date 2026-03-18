@@ -107,7 +107,7 @@ function ComingSoonCard() {
 }
 
 export default function Projects() {
-  const placeholderCount = 6;
+  const placeholderCount = Math.max(0, 6 - projects.length);
 
   return (
     <section id="projects" className="mx-auto max-w-6xl px-6 py-32">
