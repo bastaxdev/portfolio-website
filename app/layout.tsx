@@ -18,9 +18,6 @@ export const metadata: Metadata = {
   title: "Bartek — Junior Developer",
   description:
     "Portfolio of Bartek, a Junior Developer specializing in Next.js, TypeScript and React.",
-  icons: {
-    icon: "/icon.svg",
-  },
 };
 
 export default function RootLayout({
