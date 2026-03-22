@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const navLinks = [
-  { label: "About", href: "#hero" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#hero" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Contact", href: "/#contact" },
+  { label: "CV", href: "/cv" },
 ];
 
 export default function Navbar() {
@@ -36,15 +37,42 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
-          href="#hero"
+          href="/#hero"
           className="flex items-center gap-2 text-lg font-semibold tracking-tight"
           style={{ color: "var(--accent)" }}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22">
-            <rect width="32" height="32" rx="7" fill="#0a0a0f"/>
-            <polyline points="8,10 3,16 8,22" stroke="#8b7cf6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-            <polyline points="24,10 29,16 24,22" stroke="#8b7cf6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-            <line x1="19" y1="9" x2="13" y2="23" stroke="#ededed" strokeWidth="2.5" strokeLinecap="round"/>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            width="22"
+            height="22"
+          >
+            <rect width="32" height="32" rx="7" fill="#0a0a0f" />
+            <polyline
+              points="8,10 3,16 8,22"
+              stroke="#8b7cf6"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+            />
+            <polyline
+              points="24,10 29,16 24,22"
+              stroke="#8b7cf6"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+            />
+            <line
+              x1="19"
+              y1="9"
+              x2="13"
+              y2="23"
+              stroke="#ededed"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+            />
           </svg>
           bastaxdev
         </a>

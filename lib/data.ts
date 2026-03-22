@@ -7,7 +7,8 @@ export const projects: Project[] = [
     description:
       'Invoicing app for Polish freelancers working with Norwegian clients. Generates bilingual PL/NO PDFs with the correct VAT reverse charge notice.',
     tech: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS', 'shadcn/ui'],
-    liveUrl: 'https://bastaxdev-invo.vercel.app/',
+    liveUrl: 'https://www.getinvo.app/',
+    githubUrl: 'https://github.com/bastaxdev/invo',
   },
 ]
 
